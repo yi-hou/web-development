@@ -1,0 +1,15 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /home/edc/www/honeymonkeyhy.com;
+
+
+        index hw01.html;
+
+        server_name honeymonkeyhy.com hw01.honeymonkeyhy.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
